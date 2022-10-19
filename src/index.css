@@ -1,13 +1,136 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body {
+  background: url(./imgs/bg2.jpg);
+  font-family: "Italianno", cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 0 0 15px 15px;
+}
+nav .list ul {
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* header sction */
+header img {
+  width: 100%;
+  height: 350px;
+}
+
+/* Main section */
+main {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+}
+
+main .products {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 650px;
+}
+
+main .products .proPizza {
+  background-color: #fff;
+  height: 300px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px;
+  text-transform: capitalize;
+}
+
+main .products .proPizza .small {
+  width: 100%;
+  height: 160px;
+  border-radius: 15px 15px 0 0;
+}
+
+main .products .proPizza p {
+  font-size: 13px;
+  text-align: left;
+}
+
+main .products .proPizza button,
+.check {
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  transition: 0.1s;
+  font-weight: bold;
+}
+
+main .products .proPizza button:hover,
+.check:hover {
+  transform: scale(1.1);
+  background-color: #eee;
+  color: #222;
+}
+
+/* cart section */
+.cart {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  background-color: rgba(131, 130, 130, 0.6);
+  margin: 20px auto;
+  padding: 10px;
+  text-transform: capitalize;
+}
+.cart h2 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 24px;
+  color: #333;
+}
+
+/* flex */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.text-right {
+  text-align: right;
+}
+
+/* buttons */
+.add,
+.remove {
+  background-color: transparent;
+  width: 1.5rem;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.badge {
+  width: 1.5rem;
+  background-color: #eee;
 }

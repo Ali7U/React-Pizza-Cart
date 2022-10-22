@@ -134,3 +134,9 @@ main .products .proPizza button:hover,
   width: 1.5rem;
   background-color: #eee;
 }
+
+.row-2{
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}

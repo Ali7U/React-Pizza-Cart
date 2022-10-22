@@ -4,12 +4,9 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 function Basket(props) {
   const { cart, onAdd, onRemove } = props;
 
-  const itemPrice = cart.reduce(
-    (acc, curr) => acc + curr.price * curr.qty,
-    0
-  );
+  const itemPrice = cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0);
   const taxPrice = itemPrice * 0.15;
-  const totalPrice = itemPrice + taxPrice 
+  const totalPrice = itemPrice + taxPrice;
 
   return (
     <div className="cart">
@@ -24,7 +21,7 @@ function Basket(props) {
             <button onClick={() => onAdd(item)} className="add">
               <AiOutlinePlus />
             </button>
-            <button onClick={()=> onRemove(item)} className="remove" >
+            <button onClick={() => onRemove(item)} className="remove">
               <AiOutlineMinus />
             </button>
           </div>
@@ -48,9 +45,11 @@ function Basket(props) {
             <div className="col-2">total price</div>
             <div className="col-1 text-right">{totalPrice.toFixed(2)}</div>
           </div>
-          <hr/>
+          <hr />
           <div className="row">
-                <button className="check" onClick={() => alert("request is done")}>Checkout</button>
+            <button className="check" onClick={() => alert("request is done")}>
+              Checkout
+            </button>
           </div>
         </>
       )}

@@ -21,10 +21,11 @@ function App() {
       setCart([...cart, { ...product, qty: 1 }]);
     }
   };
+
   const onRemove = (product) => {
     const exist = cart.find((x) => x.id === product.id);
     if (exist.qty === 1) {
-      setCart(cart.filter((x) => x.id === product.id - 1));
+      setCart(cart.filter((x) => x.id !== product.id));
     } else {
       setCart(
         cart.map((x) =>
@@ -36,10 +37,12 @@ function App() {
   return (
     <div className="App">
       <>
-        <Nav countCart={cart.length}/>
+        <Nav countCart={cart.length} />
         <Header />
         <Main products={products} onAdd={onAdd} onRemove={onRemove} />
-        <Basket onAdd={onAdd} onRemove={onRemove} cart={cart} />
+        <div className="row-2">
+          <Basket onAdd={onAdd} onRemove={onRemove} cart={cart} />
+        </div>
       </>
     </div>
   );

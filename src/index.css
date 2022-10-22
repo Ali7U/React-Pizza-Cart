@@ -136,7 +136,7 @@ main .products .proPizza button:hover,
 }
 
 .row-2{
-  height: 100vh;
+  height: 240vh;
   display: flex;
   align-items: flex-end;
 }

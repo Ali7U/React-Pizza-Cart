@@ -143,8 +143,11 @@ main .products .proPizza button:hover,
     margin-top: 20px;
   }
   .row-2{
-  height: 240vh;
+  height: 254vh;
   display: flex;
   align-items: flex-end;
+}
+main{
+      height: 778px;
 }
 }

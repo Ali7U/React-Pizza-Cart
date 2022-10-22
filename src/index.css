@@ -140,3 +140,10 @@ main .products .proPizza button:hover,
   display: flex;
   align-items: flex-end;
 }
+
+
+@media screen and (max-width: 450px) {
+  main .products .proPizza {
+    margin-top: 20px;
+  }
+}
